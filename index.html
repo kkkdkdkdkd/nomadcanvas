@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Parcel Sandbox</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <div class="color-options">
+      <input type="color" id="color" />
+      <div
+        class="color-option"
+        style="background-color: #1abc9c;"
+        data-color="#1abc9c"
+      ></div>
+      <div
+        class="color-option"
+        style="background-color: #3498db;"
+        data-color="#3498db"
+      ></div>
+      <div
+        class="color-option"
+        style="background-color: #34495e;"
+        data-color="#34495e"
+      ></div>
+      <div
+        class="color-option"
+        style="background-color: #27ae60;"
+        data-color="#27ae60"
+      ></div>
+      <div
+        class="color-option"
+        style="background-color: #8e44ad;"
+        data-color="#8e44ad"
+      ></div>
+      <div
+        class="color-option"
+        style="background-color: #f1c40f;"
+        data-color="#f1c40f"
+      ></div>
+      <div
+        class="color-option"
+        style="background-color: #e74c3c;"
+        data-color="#e74c3c"
+      ></div>
+      <div
+        class="color-option"
+        style="background-color: #95a5a6;"
+        data-color="#95a5a6"
+      ></div>
+      <div
+        class="color-option"
+        style="background-color: #d35400;"
+        data-color="#d35400"
+      ></div>
+      <div
+        class="color-option"
+        style="background-color: #2ecc71;"
+        data-color="#2ecc71"
+      ></div>
+      <div
+        class="color-option"
+        style="background-color: #e67e22;"
+        data-color="#e67e22"
+      ></div>
+    </div>
+    <canvas></canvas>
+    <div class="btns">
+      <input
+        id="line-width"
+        type="range"
+        min="1"
+        max="10"
+        value="5"
+        step="0.3"
+      />
+      <!-- value는 처음 지정 값, step은 range의 이동을 더 촘촘하게~넓게 설정 -->
+      <button id="mode-btn">🪣Fill</button>
+      <button id="destroy-btn">💣Destroy</button>
+      <button id="eraser-btn">❌Eraser</button>
+      <label for="file">
+        📷Add photo
+        <input type="file" accept="image/*" id="file" />
+        <!-- input file버튼을 꾸미는 게 어려워서 none으로 숨기고 label로 감싸서
+        label을 꾸며, input과 연결시켜 궁극적으로 label버튼을 클릭하면 input file 실행되게 함 
+        label의 for값과 input의 id값이 같아야 함.
+        같기만 하면 어느 위치에서나 연결되지만 label 안에 두는 게 편함-->
+      </label>
+      <input type="text" placeholder="write and then double click" id="text" />
+      <button id="save">📋Save Image</button>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
